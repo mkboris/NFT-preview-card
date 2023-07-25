@@ -103,7 +103,6 @@ body {
     margin-left: 4em;
 }
 .eth-icon {
-    padding-right: 0.2em;
     width: 11px;
     height: 18px;
 }
@@ -114,7 +113,6 @@ abbr {
     color: hsl(178, 100%, 50%);
 }
 .clock {
-    padding-right: 0.2em;
     width: 16px;
     height: 16px;
 }
