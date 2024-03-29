@@ -1,166 +1,251 @@
+/* Box sizing rules */
 *,
- *::before,
- *::after {
-     box-sizing: inherit;
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+/* Prevent font size inflation */
 html {
-    box-sizing: border-box;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
 }
-html, body {
-	margin: 0;
-	padding: 0;
-	border: 0;
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
 }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
 body {
-    font-family: 'Outfit', sans-serif;
-    background-color: hsl(217, 54%, 11%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 .preview-card {
-    background-color: hsl(216, 50%, 16%);
-    margin: auto;
-    border-radius: 1rem;
-    width: 350px;
-    height: 596px;
-    padding: 1.5rem; 
-    box-shadow: 5px 5px 2px 1px hsl(217, 54%, 11%);
+  background-color: hsl(216, 50%, 16%);
+  margin: auto;
+  border-radius: 1rem;
+  width: 350px;
+  height: 596px;
+  padding: 1.5rem;
+  box-shadow: 5px 5px 2px 1px hsl(217, 54%, 11%);
 }
 .preview-image {
-    width: 302px;
-    height: 302px;
-    border-radius: 1rem;
+  width: 302px;
+  height: 302px;
+  border-radius: 1rem;
 }
 .container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
 }
 .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 900ms ease;
-    background-color: hsla(178deg, 100%, 50%, 0.5);
-    border-radius: 1rem;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 900ms ease;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  border-radius: 1rem;
+  cursor: pointer;
 }
 .container:hover .overlay {
-    opacity: 0.8;
-    border-radius: 1rem;
-    background: linear-gradient hsla(178deg, 100%, 50%, 0.5);
+  opacity: 0.8;
+  border-radius: 1rem;
+  background: linear-gradient hsla(178deg, 100%, 50%, 0.5);
 }
 .icon-view {
-    position: absolute;
-    color: hsl(0, 0%, 100%);
-    cursor: pointer;
-    left: 43%;
-    bottom: 44%;
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  left: 43%;
+  bottom: 44%;
 }
 .main-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main-heading {
-    color: hsl(0, 0%, 100%);
-    font-size: 24px;
-    font-weight: 600;  
-    align-self: flex-start; 
-    margin-bottom: 0;
+  color: hsl(0, 0%, 100%);
+  font-size: 24px;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-bottom: 0;
 }
 .main-heading:hover {
-    color: hsl(178, 100%, 50%);
-    cursor: pointer;
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
 .main-p {
-    color: hsl(215, 51%, 70%);
-    font-size: 18px;
-    text-align: left;
-    margin-bottom: 0;
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 0;
 }
 .description {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .eth-description {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: 4em;
-    font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 4em;
+  font-weight: 600;
 }
 .days-description {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 4em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 4em;
 }
 .eth-icon {
-    width: 11px;
-    height: 18px;
+  width: 11px;
+  height: 18px;
 }
 abbr {
-    text-decoration: none;
+  text-decoration: none;
 }
 .ETH-p {
-    color: hsl(178, 100%, 50%);
+  color: hsl(178, 100%, 50%);
 }
 .clock {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 .days-p {
-    color: hsl(215, 51%, 70%);
+  color: hsl(215, 51%, 70%);
 }
 .creator-info {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    gap: 0.7rem;
-    align-self: flex-start;
-    margin-top: 0.3em;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 0.7rem;
+  align-self: flex-start;
+  margin-top: 0.3em;
 }
 .avatar {
-    width: 33px;
-    height: 33px;
+  width: 33px;
+  height: 33px;
 }
 .caption {
-    color: hsl(215, 51%, 70%);
+  color: hsl(215, 51%, 70%);
 }
 .creator {
-    color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 .creator:hover {
-    color: hsl(178, 100%, 50%);
-    cursor: pointer;
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
 hr {
-    width: 302px;
-    height: 1px;
-    background: hsl(217, 54%, 11%);
+  width: 302px;
+  height: 1px;
+  background: hsl(217, 54%, 11%);
 }
-.attribution { 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    font-size: 11px; 
-    text-align: center; 
-    color: hsl(228, 45%, 44%);
-    padding: 1em 0;
+.attribution {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+  padding: 1em 0;
 }
-.attribution a { 
-    color: hsl(0, 0%, 100%); 
-    text-decoration: none;
-    margin-left: 2px;
+.attribution a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  margin-left: 2px;
 }
 .attribution a:hover {
-    color: hsl(178, 100%, 50%);
+  color: hsl(178, 100%, 50%);
 }
