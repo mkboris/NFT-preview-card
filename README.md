@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - [Solution](https://github.com/mkboris/NFT-preview-card)
-- [Live Site](https://nft-preview-card-component-mkboris.vercel.app/)
+- [Live Site](https://mkboris.github.io/NFT-preview-card/)
 
 ### Built with
 
