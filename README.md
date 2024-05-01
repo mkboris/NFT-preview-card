@@ -8,9 +8,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-  - [Continued development](#continued-development)
 - [Author](#author)
-
 
 
 ## Overview
@@ -28,18 +26,14 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/mkboris/NFT-preview-card-component
-- Live Site URL: https://nft-preview-card-component-5n7glzblx-mkboris.vercel.app/
+- [Solution](https://github.com/mkboris/NFT-preview-card)
+- [Live Site](https://nft-preview-card-component-mkboris.vercel.app/)
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-
-### Continued development
-
-Building more projects to improve my skills.
 
 ## Author
 
